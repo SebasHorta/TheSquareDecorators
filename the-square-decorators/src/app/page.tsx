@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronRight, Star, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { ChevronRight, Star, Facebook, Instagram, Linkedin, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Home() {
   const services = [
@@ -235,6 +235,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Yelp Reviews & YouTube Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Customer Reviews & Educational Content
+            </h2>
+            <p className="text-gray-700 max-w-3xl mx-auto">
+              See what our customers say and learn from our expert workshops!
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Yelp Reviews */}
+            <div className="bg-red-800 text-white rounded-lg p-8">
+              <div className="flex items-center mb-4">
+                <Star className="h-6 w-6 text-yellow-400 fill-current mr-2" />
+                <h3 className="text-2xl font-bold">Yelp Reviews</h3>
+              </div>
+              <p className="text-red-100 mb-6">
+                "The owner, Triny is incredibly professional, kind, and easy to work with. Her workmanship is BEYOND superb! Highly recommended.....10 out of 10." - Elena M.
+              </p>
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <a 
+                href="https://www.yelp.com/writeareview/biz/0fwIrUth1-FYyo2u2nWxyQ?return_url=/biz/0fwIrUth1-FYyo2u2nWxyQ" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-red-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              >
+                Read More Reviews
+              </a>
+            </div>
+
+            {/* YouTube Workshop */}
+            <div className="bg-gray-900 text-white rounded-lg p-8">
+              <div className="flex items-center mb-4">
+                <Youtube className="h-6 w-6 text-red-500 mr-2" />
+                <h3 className="text-2xl font-bold">Learn From Triny</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Watch our workshop video: "Learn how to sew Project SOS, Course of cutting and preparation focused on business"
+              </p>
+              <div className="bg-gray-800 rounded-lg p-4 mb-4">
+                <div className="aspect-video bg-gray-700 rounded flex items-center justify-center relative overflow-hidden">
+                  <img 
+                    src="https://img.youtube.com/vi/psqcd1qOJ6M/maxresdefault.jpg" 
+                    alt="YouTube Workshop Video Thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div className="bg-red-600 rounded-full p-4">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://www.youtube.com/watch?v=psqcd1qOJ6M&t=43s" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors inline-block"
+              >
+                Watch Workshop Video
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-16 bg-red-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,14 +420,23 @@ export default function Home() {
               
               <div className="mt-8">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Our Work</h4>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-red-800 hover:text-red-600">
-                    <Facebook className="h-6 w-6" />
-                  </a>
-                  <a href="#" className="text-red-800 hover:text-red-600">
-                    <Instagram className="h-6 w-6" />
-                  </a>
-                </div>
+                                  <div className="flex space-x-4">
+                    <a href="https://www.facebook.com/thesquaredecorators?ref=embed_page" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Facebook className="h-6 w-6" />
+                    </a>
+                    <a href="https://www.instagram.com/thesquaredecorators/" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Instagram className="h-6 w-6" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/the-square-decorators/about/" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Linkedin className="h-6 w-6" />
+                    </a>
+                    <a href="https://x.com/thesquaredecor1" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Twitter className="h-6 w-6" />
+                    </a>
+                    <a href="https://www.youtube.com/@TrinyDonneys/featured" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Youtube className="h-6 w-6" />
+                    </a>
+                  </div>
               </div>
             </div>
           </div>

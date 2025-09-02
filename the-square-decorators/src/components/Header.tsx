@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,12 +20,31 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top bar with phone number */}
+      {/* Top bar with phone number and social media */}
       <div className="bg-red-800 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center">
-            <Phone className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">Call Us: (516) 216-1630</span>
+          <div className="flex justify-between items-center">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Call Us: (516) 216-1630</span>
+            </div>
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/thesquaredecorators?ref=embed_page" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-200 transition-colors">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="https://www.instagram.com/thesquaredecorators/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-200 transition-colors">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="https://www.linkedin.com/company/the-square-decorators/about/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-200 transition-colors">
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a href="https://x.com/thesquaredecor1" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-200 transition-colors">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="https://www.youtube.com/@TrinyDonneys/featured" target="_blank" rel="noopener noreferrer" className="text-white hover:text-red-200 transition-colors">
+                <Youtube className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

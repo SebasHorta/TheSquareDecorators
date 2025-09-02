@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { Phone, MapPin, Mail } from 'lucide-react'
+import { Phone, MapPin, Mail, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 
 export default function Footer() {
   return (
     <footer className="bg-red-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
@@ -48,6 +48,32 @@ export default function Footer() {
                   Franklin Square, NY 11010
                 </span>
               </div>
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 mr-3 text-red-200" />
+                <span className="text-red-100">Services@thesqauredecorators.com</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/thesquaredecorators?ref=embed_page" target="_blank" rel="noopener noreferrer" className="text-red-100 hover:text-white transition-colors">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="https://www.instagram.com/thesquaredecorators/" target="_blank" rel="noopener noreferrer" className="text-red-100 hover:text-white transition-colors">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="https://www.linkedin.com/company/the-square-decorators/about/" target="_blank" rel="noopener noreferrer" className="text-red-100 hover:text-white transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="https://x.com/thesquaredecor1" target="_blank" rel="noopener noreferrer" className="text-red-100 hover:text-white transition-colors">
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a href="https://www.youtube.com/@TrinyDonneys/featured" target="_blank" rel="noopener noreferrer" className="text-red-100 hover:text-white transition-colors">
+                <Youtube className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>

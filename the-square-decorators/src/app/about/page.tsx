@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronRight, Star, Facebook, Instagram, Phone, MapPin, Award, Users, Clock } from 'lucide-react'
+import { ChevronRight, Star, Facebook, Instagram, Linkedin, Twitter, Youtube, Phone, MapPin, Award, Users, Clock } from 'lucide-react'
 
 export default function About() {
   const portfolioItems = [
@@ -247,14 +247,23 @@ export default function About() {
               
               <div className="mt-8">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Our Work</h4>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-red-800 hover:text-red-600">
-                    <Facebook className="h-6 w-6" />
-                  </a>
-                  <a href="#" className="text-red-800 hover:text-red-600">
-                    <Instagram className="h-6 w-6" />
-                  </a>
-                </div>
+                                  <div className="flex space-x-4">
+                    <a href="https://www.facebook.com/thesquaredecorators?ref=embed_page" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Facebook className="h-6 w-6" />
+                    </a>
+                    <a href="https://www.instagram.com/thesquaredecorators/" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Instagram className="h-6 w-6" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/the-square-decorators/about/" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Linkedin className="h-6 w-6" />
+                    </a>
+                    <a href="https://x.com/thesquaredecor1" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Twitter className="h-6 w-6" />
+                    </a>
+                    <a href="https://www.youtube.com/@TrinyDonneys/featured" target="_blank" rel="noopener noreferrer" className="text-red-800 hover:text-red-600">
+                      <Youtube className="h-6 w-6" />
+                    </a>
+                  </div>
               </div>
             </div>
           </div>
